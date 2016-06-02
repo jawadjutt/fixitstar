@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Carpenter";
+    Layout = "../../Views/Shared/ServiceShared.cshtml";
+}
+@model List<fixit.Models.Electrition>
+<section id="gallery" class="home-section text-center bg-gray">
+    <div class="container" style="margin-top:-100px; margin-bottom:40px;">
+        <div class=" row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="wow bounceInDown" data-wow-delay="0.4s">
+                    <div class="section-heading">
+                        <h2>Available Carpenters</h2>
+                        <p>Get everything fixed with fixit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="container" style="margin-bottom:-130px;">
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="wow bounceInUp" data-wow-delay="0.4s">
+                    <div id="owl-works" class="owl-carousel">
+                        @foreach (var i in Model)
+                        {
+                            <div class="item1" style="margin-left:30px;">
+                                <a href="../../Services/Workers/?s=Workers&id=@i.Id#gallery"><img src="@i.pic" class="img-responsive " alt="img"></a>
+                                <p class="imgDescription"> <h1>7.9</h1></p>
+                                <p class="imgDescription"> <h1>*****</h1></p>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

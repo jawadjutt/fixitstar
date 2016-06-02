@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "UpdateWorker";
+   
+}
+@model fixit.Models.Electrition
+<h2>UpdateWorker</h2>
+<form action="../../Admin/UpdateSubmit" method="post" class="form-horizontal" enctype="multipart/form-data" role="form">
+    <input type="hidden" name="Id" value="@Model.Id"/>
+    <div class="form-group">
+        <label class="control-label col-lg-3" for="name">Name: </label>
+        <div class="col-lg-4">
+            <input type="text" value="@Model.Name" class="form-control" name="Name" required placeholder="Enter Name" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-lg-3" for="address">Address:</label>
+        <div class="col-lg-4">
+            <input type="text" value="@Model.address" class="form-control" name="Address" required placeholder="Enter Address" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3" for="address">CNIC:</label>
+        <div class="col-lg-4">
+            <input type="text" value="@Model.NIC" class="form-control" name="NIC" required placeholder="Enter Address" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3" for="address">Date of Birth:</label>
+        <div class="col-lg-4">
+            <input type="text" value="@Model.Age"  class="form-control" name="Age" required placeholder="Enter Address" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3" for="address">Date of Joining:</label>
+        <div class="col-lg-4">
+            <input type="text" value="@Model.DateOfJoining" class="form-control" name="DateOfJoining" required placeholder="Enter Address" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-lg-3" for="address">worker ID:</label>
+        <div class="col-lg-4">
+            <input type="text" value="@Model.workerId" class="form-control" name="workerId" required placeholder="Enter Address" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-lg-3" for="address">Upload Photo:</label>
+        <div class="col-lg-4">
+            <input type="file" value="@Model.pic" name="pic" accept="image/*">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-lg-offset-3 col-lg-10">
+            <input type="submit" value="Submit" class="btn btn-default" />
+        </div>
+    </div>
+</form>

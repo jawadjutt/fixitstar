@@ -1,0 +1,204 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Agency - FIX-IT</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="../../Content/css/agency.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../../Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="path-to-file/social-sharing.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../../Content/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="../../Content/Services/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../Content/Services/css/nivo-lightbox.css" rel="stylesheet" />
+    <link href="../../Content/Services/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/Services/css/owl.carousel.css" rel="stylesheet" media="screen" />
+    <link href="../../Content/Services/css/owl.theme.css" rel="stylesheet" media="screen" />
+    <link href="../../Content/Services/css/animate.css" rel="stylesheet" />
+
+
+    <link rel='stylesheet' id='camera-css' href='../../Content/workerscss/css/camera.css' type='text/css' media='all'>
+    <link rel="stylesheet" type="text/css" href="../../Content/workerscss/css/slicknav.css">
+    <link rel="stylesheet" href="../../Content/workerscss/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../Content/workerscss/css/style.css">
+
+   
+    <link rel="stylesheet" href="../../Content/workerscss/workerprofile/css/star-rating.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../../Content/workerscss/workerprofile/js/star-rating.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript" src="../../Content/workerscss/js/jquery-1.8.3.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="../../Content/workerscss/js/jquery.mobile.customized.min.js"></script>
+    <script type="text/javascript" src="../../Content/workerscss/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="../../Content/workerscss/js/camera.min.js"></script>
+    <script type="text/javascript" src="../../Content/workerscss/js/myscript.js"></script>
+    <script src="../../Content/workerscss/js/sorting.js" type="text/javascript"></script>
+    <script src="../../Content/workerscss/js/jquery.isotope.js" type="text/javascript"></script>
+    <!--script type="text/javascript" src="js/jquery.nav.js"></script-->
+</head>
+<body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand page-scroll" href="#page-top"><img src="../../Content/img/logo.png" alt="" height="60px" width="60px" style=" margin-top:-20px; margin-left:-35px;"> </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../../Home/Index">home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#gallery">@ViewBag.workerID</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../../Home/Index#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../../Home/Index#about">about</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../../Home/Index#team">team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../../Home/Index#contact">Contact</a>
+                    </li>
+                    @if (Session["user"] == null && Session["admin"] == null)
+                    {
+                        <li>
+                            <a class="page-scroll" href="../../Admin/login">login</a>
+                        </li>
+                    }
+                    else if (Session["user"] != null && Session["admin"] == null)
+                    {
+                        <li>
+                            <a class="page-scroll" href="../../Admin/logout">logout/user</a>
+                        </li>
+                    }
+                    else if (Session["admin"] != null && Session["user"] == null)
+                    {
+                        <li>
+                            <a class="page-scroll" href="../../Admin/logout">logout/admin</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+            </div>
+        </div>
+    </header>
+    <div class="container" style="margin-top:-74px;">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="#services" class="page-scroll btn btn-xl">Connect us on facebook</a>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+    <!-- Portfolio Modal 1 -->
+
+    <!-- jQuery -->
+    <script src="../../Content/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../Content/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="../../Content/js/classie.js"></script>
+    <script src="../../Content/js/cbpAnimatedHeader.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="../../Content/js/jqBootstrapValidation.js"></script>
+    <script src="../../Content/js/contact_me.js"></script>
+    <!-- Custom Theme JavaScript -->
+ 
+    <script src="../../Content/Services/js/jquery.min.js"></script>
+    <script src="../../Content/Services/js/bootstrap.min.js"></script>
+    <script src="../../Content/Services/js/jquery.easing.min.js"></script>
+    <script src="../../Content/Services/js/jquery.sticky.js"></script>
+    <script src="../../Content/Services/js/jquery.scrollTo.js"></script>
+    <script src="../../Content/Services/js/stellar.js"></script>
+    <script src="../../Content/Services/js/wow.min.js"></script>
+    <script src="../../Content/Services/js/owl.carousel.min.js"></script>
+    <script src="../../Content/Services/js/nivo-lightbox.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="../../Content/Services/js/custom.js"></script>
+
+</body>
+</html>

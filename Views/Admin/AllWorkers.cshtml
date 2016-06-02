@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "AllWorkers";
+    Layout = null;//"~/Views/Shared/AdminShared.cshtml";
+}
+@model List<fixit.Models.Electrition>
+<h2>AllWorkers</h2>
+
+
+
+<table style="width:100%">
+    <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    @foreach (var i in Model)
+    {
+
+    
+    <tr>
+        <td>@i.Id</td>
+        <td>@i.Name</td>
+        <td>@i.NIC</td>
+        <td><a href="/Admin/DeleteWorker/@i.Id">Delete worker</a></td>
+        <td><a href="/Admin/UpdateWorker/@i.Id">Update worker</a></td>
+    </tr>
+    }
+</table>
